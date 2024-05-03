@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Valencia Expat rain calculator</title>
+    <meta name="description"
+        content="See if you can have coffee outside with the amazing expat Valencia rain calculator" />
+    <style>
+        #button {
+            cursor: pointer;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        div.a {
+        text-align: center;
+        }
+        body {
+          background-image: url('city-background.jpg');
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: white;
+        }
+    </style>
+    <div class="a">
+    <h1>It never rains in Valencia</h1>
+    <h2>Check if you digital nomad asshole can work outside with your Macbook Today</h2>
+    <p><span id="button">[Can i work in my fav Coffee today?]</span></p>
+    <p id="result"></p>
+    </div>
+    <pre><script>
+            let res = undefined
+        const button = document.getElementById("button")
+        const result = document.getElementById("result")
+        button.addEventListener("click", () => {
+            const random = Math.random() * 100
+            raincalculatorValenciaToTestIfCoffeeOutside(random)
+        })
+        if (false) { document.writeln("Hallo Plug & Play !") };
+        ["Bitcoin Reichtum", "Farmhaus in Spanien", "Arbeiten am Strand", "nope"].forEach(name => {
+            if (name !== "nope" && name !== "Bitcoin Reichtum" && false) {
+                document.writeln(`Michael hat mir coden gezeigt, darauf folgt: ${name}`)
+            }
+        });
+
+        const raincalculatorValenciaToTestIfCoffeeOutside = (prob) => {
+            if (res?.timelines?.daily[0]?.values?.precipitationProbabilityMax > 0.0254) {
+                result.innerText = "Oh no, it is going to rain today :( Looks like it DOES rain in Valencia after all..."
+                x
+            } else {
+                result.innerText = "It never rains in Valencia :) Make sure to tip the waiter!"
+            }
+            const options = { method: 'GET', headers: { accept: 'application/json' } };
+            setTimeout(() => result.innerText = "", 2000)
+        }
+
+        const options = { method: 'GET', headers: { accept: 'application/json' } };
+
+        fetch('https://api.tomorrow.io/v4/weather/forecast?location=39.4746%2C-0.3850&timesteps=daily&apikey=FNBpVocX9Tev1XiR9ZPrevoaWM9TCrVl', options)
+            .then(response => response.json())
+                .then(response => {
+                    console.log(response)
+                    res=response
+                })
+            .catch(err => console.error(err));
+
+    </script></pre>
+</body>
+
+</html>
+
+
+
+
+
+<!--false bedeutet das irgendwo eine bedingung nichterfüllt wird 
+und damit alles abgeblasen wird sofern ist mit && verbunden ist, 
+z.b. ich gehe in die Bar und brauche geld und freunde, ist eines 
+von beiden nicht erfüllt wird es false
+----------
+Beispiele
+---------
+true
+false
+
+true & true = true
+true & false = false
+false & true = false
+false & false = false
+true | true = true
+false | true = true
+true | false = true
+false | false = false
+
+1 = true
+0 = false
+
+1 & 1 = 1
+0 & 1 = 0
+1 & 0 = 0
+0 & 0 = 0
+
+1 | 1 = 1
+0 | 1 = 1
+1 | 0 = 1
+0 | 0 = 0
+--------------------------------------
+Check auf Bedingunge below this line
+--------------------------------------
+Erfüllt (gleich ===)
+---------------------
+"asdf" === "asdf" = true
+"asdf" === "asdg" = false
+------------------------
+Unerfüllt (ungleich !==)
+-------------------------
+"asdf" !== "asdf" = false
+"asdf" !== "asdg" = true
+-------------------------
+Verneinung
+------------------------
+!true = flase
+!false = true
+
+Beispiel-Syntaxe if else Block:
+if(bedingung){was passieren soll wenn die Bedingung erfuellt ist}
+if(bedingung){was passieren soll wenn die Bedingung erfuellt ist}else{was passieren soll wenn die Bedingung nicht erfuellt ist}
+
+-------------------------------
+Definition von Random Zahlen
+-------------------------------
+const random = Math.random()*100 <---bedeutet in diesem Fall das er zwischen 0 und 1 
+eine zahlt nimmt und die mit 100 multipliziert (aus einer Zahl zwischen 0 und 1 wird eine Zahl zwischen 0 und 100)
+
+
+
+TODO / cloudbaseaverage austauschen
+Wert definieren fuer if else 
+checken wie der wert range ist , wenn z.b. 0 bis 1 , dann eben 0,3 nehmen
+if cloudbase average is greater than 1,5 show ....... else show ........
+-->
